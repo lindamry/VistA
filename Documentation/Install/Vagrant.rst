@@ -42,7 +42,7 @@ First you need to download and install a few utilities:
 Vagrant
 -------
 
-Vagrant can be download from http://downloads.vagrantup.com/. You need to
+Vagrant can be downloaded from http://downloads.vagrantup.com/. You need to
 download the correct version of vagrant according to your operating system.
 
 The vagrant download site is organized so the latest version is always at the
@@ -75,7 +75,7 @@ To download the OSEHRA/VistA repository you need Git, which is available at
 http://www.git-scm.com. Git is an open source distributed version control
 system that is incredibly popular for managing the source code of projects.
 
-On the right side of the screen there is a monitor and should display the
+On the right side of the screen there is a monitor which should display the
 correct version of git for your operating system.
 
 You can install Git at this point. It is a simple installer that you can take
@@ -107,11 +107,11 @@ This should only take a few minutes to finish.
 Install Vagrant VirtualBox Guest Additions Plugin
 -------------------------------------------------
 
-With the latest versions of VirtualBox and Vagrant the mounting of the shared
-folders may fail. By adding a plugin to Vagrant the Virtualbox Guest Additions
+With the latest versions of VirtualBox and Vagrant, the mounting of the shared
+folders may fail. By adding a plugin to Vagrant, the Virtualbox Guest Additions
 will be automatically installed when a VM is brought up.
 
-To install the plugin perform the following
+To install the plugin, perform the following
 
 .. parsed-literal::
 
@@ -119,17 +119,17 @@ To install the plugin perform the following
     ~$ :usertype:`vagrant plugin install vagrant-vbguest`
 
 You may see an error that the installer "Could not find the X.Org or XFree86
-Window System, skipping.". This error is ok and will not cause any issues. This
+Window System, skipping." This error is ok and will not cause any issues. This
 is because the created VM doesn't contain a GUI/X Window System.
 
 Start the provisioning process
 ------------------------------
 
-Now since we have a clone of the VistA repository we now need to provision a
+Now since we have a clone of the VistA repository, we need to provision a
 new virtual machine using Vagrant. This process is automated and should take
 about 30 minutes to complete.
 
-NOTE: If you would like to not install the development directories by default
+NOTE: If you don't want to install the development directories by default
 (necessary for the ability to re-run the testing or ImportRG.cmake) you must
 manually edit the ``Vagrantfile`` located in ``Scripts/Install/Ubuntu`` and
 remove the ``-e`` on line 147. It should look like:
@@ -143,9 +143,9 @@ Ubuntu Virtual Machine.
     ~$ :usertype:`cd Development/VistA/Scripts/Install/Ubuntu`
     ~/Development/VistA/Scripts/Install/Ubuntu$ :usertype:`vagrant up`
 
-There will be lots of console output in green and red text. For advanced users
+There will be lots of console output in green and red text. For advanced users,
 green text would be from standard out and red text is from standard error. Just
-because text is in red it doesn't mean that there really is an error. Vagrant
+because text is in red doesn't mean that there really is an error. Vagrant
 will display an error message if there truly is an error. If something goes
 wrong you can post a message to the OSEHRA VistA project at
 http://www.osehra.org with the screen output and someone can help from there.
